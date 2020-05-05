@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         loginSignupButton.backgroundColor = UIColor(hue: 190/360, saturation: 70/100, brightness: 80/100, alpha: 1.0)
         loginSignupButton.tintColor = .white
         loginSignupButton.layer.cornerRadius = 8.0
+        
+        passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
@@ -58,7 +60,8 @@ class LoginViewController: UIViewController {
                         print("error signing up: \(error)")
                     }
                 })
-            } else {
+            } else if loginType == .signIn  {
+                dismiss(animated: true, completion: nil)
                 // TODO: call signin method on apiController with above user object
             }
         }
