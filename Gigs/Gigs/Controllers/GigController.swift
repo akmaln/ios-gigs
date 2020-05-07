@@ -153,7 +153,7 @@ class GigController {
         var request = URLRequest(url: allGigsURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+       
         
         jsonEncoder.dateEncodingStrategy = .iso8601
         
