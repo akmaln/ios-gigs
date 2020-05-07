@@ -61,8 +61,28 @@ class LoginViewController: UIViewController {
                     }
                 })
             } else if loginType == .signIn  {
-                dismiss(animated: true, completion: nil)
                 // TODO: call signin method on apiController with above user object
+                gigController?.logIn(with: user, completion: { (result) in
+                    do {
+                        let success = try result.get()
+                        if success {
+                            DispatchQueue.main.async {
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        }
+                    } catch {
+                        if let error = error as? GigController.NetworkError {
+                            switch error {
+                            case .failedLogIn:
+                                print("sign in failed")
+                            case .noData, .noToken:
+                                print("no data recieved")
+                            default:
+                                print("other error occured")
+                            }
+                        }
+                    }
+                })
             }
         }
     }

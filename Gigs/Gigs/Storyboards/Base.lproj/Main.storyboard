@@ -7,6 +7,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Gig Detail View Controller-->
+        <scene sceneID="Xij-Uj-TOD">
+            <objects>
+                <viewController id="BeU-CP-5Pd" customClass="GigDetailViewController" customModule="Gigs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7vx-qS-Tgc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucB-MS-9QF">
+                                <rect key="frame" x="114" y="124" width="292" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-F8-PYo">
+                                <rect key="frame" x="0.0" y="224" width="414" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-2H-8FP">
+                                <rect key="frame" x="10" y="128" width="96" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADG-bu-MpR">
+                                <rect key="frame" x="10" y="195" width="103" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cZ-ZN-T2m">
+                                <rect key="frame" x="10" y="448" width="126" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="14M-FA-ysk">
+                                <rect key="frame" x="10" y="485" width="396" height="224"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="14M-FA-ysk" firstAttribute="leading" secondItem="p14-dO-v6f" secondAttribute="leading" constant="10" id="98k-YR-EHD"/>
+                            <constraint firstItem="p14-dO-v6f" firstAttribute="trailing" secondItem="7cZ-ZN-T2m" secondAttribute="trailing" constant="278" id="9wG-Ke-bnC"/>
+                            <constraint firstItem="xfO-2H-8FP" firstAttribute="leading" secondItem="p14-dO-v6f" secondAttribute="leading" constant="10" id="J60-UE-2Ni"/>
+                            <constraint firstItem="xfO-2H-8FP" firstAttribute="top" secondItem="p14-dO-v6f" secondAttribute="top" constant="40" id="JOe-bg-bZW"/>
+                            <constraint firstItem="XLp-F8-PYo" firstAttribute="leading" secondItem="p14-dO-v6f" secondAttribute="leading" id="KgZ-Lk-c0L"/>
+                            <constraint firstItem="7cZ-ZN-T2m" firstAttribute="leading" secondItem="p14-dO-v6f" secondAttribute="leading" constant="10" id="Pcl-Ch-1gT"/>
+                            <constraint firstItem="ADG-bu-MpR" firstAttribute="top" secondItem="xfO-2H-8FP" secondAttribute="bottom" constant="38" id="Rey-wO-5Bs"/>
+                            <constraint firstItem="p14-dO-v6f" firstAttribute="trailing" secondItem="ucB-MS-9QF" secondAttribute="trailing" constant="8" id="Ueb-na-rZK"/>
+                            <constraint firstItem="XLp-F8-PYo" firstAttribute="top" secondItem="ucB-MS-9QF" secondAttribute="bottom" constant="66" id="ZYg-b3-IzM"/>
+                            <constraint firstItem="7cZ-ZN-T2m" firstAttribute="top" secondItem="XLp-F8-PYo" secondAttribute="bottom" constant="8" id="aJo-RO-zjZ"/>
+                            <constraint firstItem="XLp-F8-PYo" firstAttribute="trailing" secondItem="p14-dO-v6f" secondAttribute="trailing" id="bbg-3q-Kxc"/>
+                            <constraint firstItem="ADG-bu-MpR" firstAttribute="leading" secondItem="p14-dO-v6f" secondAttribute="leading" constant="10" id="dsP-p6-rYh"/>
+                            <constraint firstItem="p14-dO-v6f" firstAttribute="trailing" secondItem="14M-FA-ysk" secondAttribute="trailing" constant="8" id="ePv-pQ-yBx"/>
+                            <constraint firstItem="XLp-F8-PYo" firstAttribute="top" secondItem="ADG-bu-MpR" secondAttribute="bottom" id="ehc-wZ-0UX"/>
+                            <constraint firstItem="p14-dO-v6f" firstAttribute="bottom" secondItem="14M-FA-ysk" secondAttribute="bottom" constant="153" id="hio-YW-b85"/>
+                            <constraint firstItem="ucB-MS-9QF" firstAttribute="top" secondItem="p14-dO-v6f" secondAttribute="top" constant="36" id="iZu-vO-eCQ"/>
+                            <constraint firstItem="14M-FA-ysk" firstAttribute="top" secondItem="7cZ-ZN-T2m" secondAttribute="bottom" constant="8" id="kHh-PE-pdh"/>
+                            <constraint firstItem="p14-dO-v6f" firstAttribute="trailing" secondItem="ADG-bu-MpR" secondAttribute="trailing" constant="301" id="pCl-zi-HyW"/>
+                            <constraint firstItem="ucB-MS-9QF" firstAttribute="leading" secondItem="xfO-2H-8FP" secondAttribute="trailing" constant="8" id="y1p-5K-2DY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p14-dO-v6f"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w9t-L8-xE6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="tDX-gT-ebU">
+                            <connections>
+                                <action selector="saveButton:" destination="BeU-CP-5Pd" id="mTf-yo-oTs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="XLp-F8-PYo" id="BPQ-bd-VZ2"/>
+                        <outlet property="descriptionTextView" destination="14M-FA-ysk" id="uZC-b3-hLj"/>
+                        <outlet property="jobTitleTextField" destination="ucB-MS-9QF" id="RNR-6K-fe3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plI-Aw-wfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="-690.40178571428567"/>
+        </scene>
         <!--Gigs Table View Controller-->
         <scene sceneID="Vsn-QY-81C">
             <objects>
@@ -39,6 +123,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BeU-CP-5Pd" kind="show" identifier="ShowGig" id="AhZ-Xm-wAL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,7 +133,13 @@
                             <outlet property="delegate" destination="ceh-8F-pqZ" id="7sp-70-Jwv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bTB-jc-dPv"/>
+                    <navigationItem key="navigationItem" id="bTB-jc-dPv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JR8-nf-JDc">
+                            <connections>
+                                <segue destination="BeU-CP-5Pd" kind="show" identifier="AddGig" id="OpM-Xd-kIt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="EEi-fF-Vgf" kind="modal" identifier="LoginViewModalSegue" modalPresentationStyle="fullScreen" id="ndj-xy-Wsd"/>
                     </connections>
@@ -139,4 +232,7 @@
             <point key="canvasLocation" x="124.6376811594203" y="24.776785714285712"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OpM-Xd-kIt"/>
+    </inferredMetricsTieBreakers>
 </document>
